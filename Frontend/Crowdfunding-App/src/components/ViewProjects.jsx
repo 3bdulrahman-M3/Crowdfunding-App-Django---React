@@ -191,7 +191,7 @@ const ViewProjects = () => {
                                         </p>
                                         <button
                                             className="btn btn-primary btn-lg px-5"
-                                            onClick={handleBackToHome}
+                                            onClick={() => navigate('/create-project')}
                                             style={{
                                                 background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
                                                 border: 'none',
