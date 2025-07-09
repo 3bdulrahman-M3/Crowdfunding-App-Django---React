@@ -33,7 +33,7 @@ const MyProjects = () => {
                 const userDataObj = userData ? JSON.parse(userData) : null;
                 const myProjects = res.data.filter(p => Number(p.owner) === Number(userDataObj?.id));
                 setProjects(myProjects);
-            } catch (err) {
+            } catch {
                 setError('Failed to fetch your projects.');
             } finally {
                 setLoading(false);
@@ -57,7 +57,7 @@ const MyProjects = () => {
 
     return (
         <div className="container py-5">
-            <h2 className="mb-4 text-center text-primary">My Projects</h2>
+            <h2 className="mb-4 text-center" style={{ color: '#fff' }}>My Projects</h2>
             {projects.length === 0 ? (
                 <div className="alert alert-info text-center">You have not created any projects yet.</div>
             ) : (

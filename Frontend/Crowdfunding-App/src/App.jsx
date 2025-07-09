@@ -11,7 +11,10 @@ import MyProjects from './components/MyProjects';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App" style={{
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        minHeight: '100vh'
+      }}>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
